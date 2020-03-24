@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.MainActivity">
+
+    <com.github.florent37.shapeofview.shapes.ArcView
+        android:id="@+id/shaped_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:elevation="2.0dp"
+        app:shape_arc_cropDirection="outside"
+        app:shape_arc_height="25dp"
+        app:shape_arc_position="bottom">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_gravity="center"
+            android:background="@color/colorPrimary"
+            android:elevation="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Choose Your Path"
+                android:textColor="#fff"
+                android:textSize="17sp" />
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.github.florent37.shapeofview.shapes.ArcView>
+
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/categ_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="8"
+        android:padding="14dp"
+        app:columnCount="2"
+        app:columnOrderPreserved="false"
+        app:rowCount="3">
+
+        <!--row number 2-->
+        <!--column number 1-->
+        <LinearLayout
+            android:id="@+id/cat_geography_out_layout"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/category_selector"
+            android:clickable="true"
+            app:layout_column="0"
+            app:layout_row="0"
+            app:layout_columnWeight="1"
+            app:layout_gravity="start"
+            >
+            <com.github.florent37.shapeofview.shapes.CircleView
+                android:layout_height="140dp"
+                android:layout_width="140dp">
+                <FrameLayout
+                    android:id="@+id/cat_geography_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#673AB7"
+                    >
+                    <ImageView
+                        android:id="@+id/cat_geography_icon"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/ic_geography" />
+                </FrameLayout>
+            </com.github.florent37.shapeofview.shapes.CircleView>
+
+            <TextView
+                android:id="@+id/cat_geography_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/raleway"
+                android:text="Geography"
+                android:textColor="#424242"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/cat_art_out_layout"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_column="1"
+            app:layout_row="0"
+            android:clickable="true"
+            android:padding="5dp"
+            android:background="@drawable/category_selector"
+            app:layout_columnWeight="1"
+            app:layout_gravity="end"
+
+            >
+            <com.github.florent37.shapeofview.shapes.CircleView
+                android:layout_height="140dp"
+                android:layout_width="140dp"
+                android:layout_gravity="center">
+                <FrameLayout
+                    android:id="@+id/cat_art_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#FF9800"
+                    >
+                    <ImageView
+                        android:id="@+id/cat_art_icon"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/ic_art" />
+                </FrameLayout>
+            </com.github.florent37.shapeofview.shapes.CircleView>
+
+            <TextView
+                android:id="@+id/cat_art_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/raleway"
+                android:text="Art &amp; Design"
+                android:textColor="#424242"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+
+
+        <!--row number 2-->
+        <!--column number 1-->
+        <LinearLayout
+            android:id="@+id/cat_sport_out_layout"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/category_selector"
+            android:clickable="true"
+            app:layout_column="0"
+            app:layout_row="1"
+            app:layout_columnWeight="1"
+            app:layout_gravity="start"
+            >
+            <com.github.florent37.shapeofview.shapes.CircleView
+                android:layout_height="140dp"
+                android:layout_width="140dp">
+                <FrameLayout
+                    android:id="@+id/cat_sport_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#9C27B0"
+                    >
+                    <ImageView
+                        android:id="@+id/cat_sport_icon"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/ic_sports" />
+                </FrameLayout>
+            </com.github.florent37.shapeofview.shapes.CircleView>
+
+            <TextView
+                android:id="@+id/cat_sport_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/raleway"
+                android:text="Sports"
+                android:textColor="#424242"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/cat_history_out_layout"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_column="1"
+            app:layout_row="1"
+            android:clickable="true"
+            android:padding="5dp"
+            android:background="@drawable/category_selector"
+            app:layout_columnWeight="1"
+            app:layout_gravity="end"
+
+            >
+            <com.github.florent37.shapeofview.shapes.CircleView
+                android:layout_height="140dp"
+                android:layout_width="140dp"
+                android:layout_gravity="center">
+                <FrameLayout
+                    android:id="@+id/cat_history_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#F44336"
+                    >
+                    <ImageView
+                        android:id="@+id/cat_history_icon"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/ic_history" />
+                </FrameLayout>
+            </com.github.florent37.shapeofview.shapes.CircleView>
+
+            <TextView
+                android:id="@+id/cat_history_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/raleway"
+                android:text="Art &amp; Design"
+                android:textColor="#424242"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+
+        <!--row number 3-->
+        <!--column number 1-->
+        <LinearLayout
+            android:id="@+id/cat_games_out_layout"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/category_selector"
+            android:clickable="true"
+            app:layout_column="0"
+            app:layout_row="2"
+            app:layout_columnWeight="1"
+            app:layout_gravity="start"
+            >
+            <com.github.florent37.shapeofview.shapes.CircleView
+                android:layout_height="140dp"
+                android:layout_width="140dp">
+                <FrameLayout
+                    android:id="@+id/cat_games_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#FFC107"
+                    >
+                    <ImageView
+                        android:id="@+id/cat_games_icon"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/ic_videgames" />
+                </FrameLayout>
+            </com.github.florent37.shapeofview.shapes.CircleView>
+
+            <TextView
+                android:id="@+id/cat_games_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/raleway"
+                android:text="Video Games"
+                android:textColor="#424242"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/cat_science_out_layout"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_column="1"
+            app:layout_row="2"
+            android:clickable="true"
+            android:padding="5dp"
+            android:background="@drawable/category_selector"
+            app:layout_columnWeight="1"
+            app:layout_gravity="end"
+
+            >
+            <com.github.florent37.shapeofview.shapes.CircleView
+                android:layout_height="140dp"
+                android:layout_width="140dp"
+                android:layout_gravity="center">
+                <FrameLayout
+                    android:id="@+id/cat_science_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#03A9F4"
+                    >
+                    <ImageView
+                        android:id="@+id/cat_science_icon"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/ic_science" />
+                </FrameLayout>
+            </com.github.florent37.shapeofview.shapes.CircleView>
+
+            <TextView
+                android:id="@+id/cat_science_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/raleway"
+                android:text="Science"
+                android:textColor="#424242"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+
+
+    </androidx.gridlayout.widget.GridLayout>
+
+
+</LinearLayout>
