@@ -1,0 +1,12 @@
+Choosing supported categories based on verified questions :
+    id-|-name-------------------------|-verified questions
+    21 | Sports                       | 119
+    18 | Science: Computers           | 147
+    31 | Anime & Manga                | 170
+    17 | Science & Nature             | 203
+    22 | Geography                    | 256
+    23 | History                      | 273
+    09 | General Knwleadge            | 276
+    15 | Video Games                  | 858
+
+
