@@ -22,7 +22,7 @@
             android:layout_height="85dp"
             android:layout_gravity="center"
             android:background="@color/colorPrimary"
-            android:elevation="5dp">
+            android:elevation="0dp">
 
             <TextView
                 android:layout_width="match_parent"
@@ -192,7 +192,7 @@
 
         <!-- row number 3 column number 2 -->
         <LinearLayout
-            android:tag="Science: Computer"
+            android:tag="Science: Computers"
             android:id="@+id/cat_computer_out_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -234,7 +234,7 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/raleway"
                 android:inputType="textMultiLine"
-                android:text="Science: Computer"
+                android:text="Science: Computers"
                 android:textColor="#424242"
                 android:textSize="17sp" />
         </LinearLayout>
@@ -250,10 +250,12 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="20dp"
         android:text="Choose Random"
         android:textAllCaps="false"
+        android:onClick="userChoosedCategory"
         android:textSize="16sp" />
 
 </LinearLayout>

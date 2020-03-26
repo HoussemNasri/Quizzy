@@ -9,4 +9,9 @@
         <item name="android:textAlignment">center</item>
     </style>
 
+    <style name="buttonTextStyle" parent="TextAppearance.AppCompat">
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:layout_gravity">start</item>
+    </style>
+
 </resources>
