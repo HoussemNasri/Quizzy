@@ -47,6 +47,18 @@
             android:background="@color/colorPrimary">
 
             <TextView
+                android:id="@+id/question_index"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="Question 1/20"
+                android:textColor="#BFFFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
                 android:id="@+id/question_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -71,11 +83,11 @@
         android:id="@+id/options_layout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintStart_toEndOf="@id/question_top_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/question_top_layout"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintStart_toEndOf="@id/question_top_layout"
+        app:layout_constraintTop_toBottomOf="@id/question_top_layout">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/option_1"
@@ -141,6 +153,40 @@
             app:layout_constraintTop_toBottomOf="@id/option_3">
 
         </Button>
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias=".9">
+            <TextView
+                android:id="@+id/tvPercent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="75"
+                android:textColor="#757575"
+                android:fontFamily="@font/open_sans_bold"
+                android:textSize="22sp" />
+            <com.timqi.sectorprogressview.ColorfulRingProgressView
+                android:id="@+id/spv"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                app:bgColor="#e5e5e5"
+                app:fgColor="#ff765c"
+                app:fgColorStart="#FFB65C"
+
+                app:percent="50"
+                app:startAngle="0"
+                app:strokeWidth="10dp"
+
+                />
+        </FrameLayout>
+
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
